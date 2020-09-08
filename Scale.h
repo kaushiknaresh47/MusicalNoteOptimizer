@@ -14,8 +14,8 @@
 
 class Scale{
 public:
-    Scale(std::string setter[10]){
-        for (int i = 0; i < 10; i++) {
+    Scale(std::string setter[7]){
+        for (int i = 0; i < 7; i++) {
             notes[i] = setter[i];
         }
     }
@@ -24,7 +24,7 @@ public:
         return notes[index];
     }
 private:
-    std::string notes[10];
+    std::string notes[7];
 };
 
 #endif /* Scale_h */
