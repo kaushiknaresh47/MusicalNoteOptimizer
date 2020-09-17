@@ -6,9 +6,18 @@
 //  Copyright © 2020 Kaushik Naresh. All rights reserved.
 //
 
-#ifndef helper_hpp
-#define helper_hpp
+#ifndef helper_h
+#define helper_h
 
 #include <stdio.h>
+#include <string>
+#include <vector>
 
-#endif /* helper_hpp */
+
+int validateString(std::string notes);
+
+void getNotes(std::string notes, std::vector<std::string>* n);
+
+std::vector<int> notesToInt(std::vector<std::string> notes);
+
+#endif /* helper_h */

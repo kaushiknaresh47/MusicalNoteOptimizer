@@ -14,15 +14,8 @@
 
 class Scale{
 public:
-    Scale(std::string setter[7]){
-        for (int i = 0; i < 7; i++) {
-            notes[i] = setter[i];
-        }
-    }
-    
-    std::string getNote(int index) const{
-        return notes[index];
-    }
+    Scale(std::string setter[7]);
+    std::string getNote(int index) const;
 private:
     std::string notes[7];
 };

@@ -6,4 +6,9 @@
 //  Copyright © 2020 Kaushik Naresh. All rights reserved.
 //
 
-#include "test.hpp"
+#include "test.h"
+
+bool Test::test1(){
+    
+    return true;
+}
