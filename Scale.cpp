@@ -7,6 +7,7 @@
 //
 
 #include "Scale.h"
+#include <cassert>
 
 Scale::Scale(std::string setter[7]){
     for (int i = 0; i < 7; i++) {
@@ -16,5 +17,6 @@ Scale::Scale(std::string setter[7]){
 
 
 std::string Scale::getNote(int index) const{
+    assert(index > 0 && index < 7);
     return notes[index];
 }
