@@ -8,7 +8,7 @@
 
 #include "test.h"
 
-bool Test::test1(){
-    
+bool Test::test1(){    
+
     return true;
 }
