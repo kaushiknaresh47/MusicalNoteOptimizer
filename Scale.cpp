@@ -10,6 +10,7 @@
 #include <cassert>
 
 Scale::Scale(std::string setter[7]){
+    notes.resize(7);
     for (int i = 0; i < 7; i++) {
         notes[i] = setter[i];
     }

@@ -11,13 +11,16 @@
 
 #include <stdio.h>
 #include <string>
+#include <vector>
+
 
 class Scale{
 public:
     Scale(std::string setter[7]);
     std::string getNote(int index) const;
 private:
-    std::string notes[7];
+    std::vector<std::string> notes;
+
 };
 
 #endif /* Scale_h */

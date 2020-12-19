@@ -12,13 +12,39 @@
 #include <string>
 #include <vector>
 #include <stdio.h>
+#include <unordered_map>
+#include "helper.h"
 
 class std_scales {
 public:
     void scale_access(std::string &scale, std::string scale_name);
+    float note_val_access(std::string note)
+    {
+        return notes_vals[note];
+    }
 private:
-    std::vector<std::string> all_scales;
-}
+    int x;
+    std::unordered_map<std::string, float> notes_vals =
+    {
+        {"C",   1},
+        {"C#",  1.5},
+        {"Db",  1.5},
+        {"D",   2},
+        {"D#",  2.5},
+        {"Eb",  2.5},
+        {"E",   3},
+        {"F",   4},
+        {"F#",  4.5},
+        {"Gb",  4.5},
+        {"G",   5},
+        {"G#",  5.5},
+        {"Ab",  5.5},
+        {"A",   6},
+        {"A#",  6.5},
+        {"Bb",  6.5},
+        {"B",   7}
+    };
+};
 
 
 
