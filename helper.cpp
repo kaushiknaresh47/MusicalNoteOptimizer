@@ -8,8 +8,15 @@
 
 #include "helper.h"
 
+// validateString
+// args: string of notes
+// return: 1 if string is valid, 0 otherwise
+// makes sure that a given input of notes is a valid
+// combination of notes
+// Examples:
+// validateString("Z X SA") returns 0
+// validateString("A C# Bb D") returns 1
 int validateString(std::string notes){
-    
     for (int i = 0; i < notes.length(); i++){
         if (notes[i] != 'C' ||
             notes[i] != 'D' ||
@@ -33,15 +40,16 @@ int validateString(std::string notes){
                     notes[i-1] != 'B') return 0;
             }
         } else if (notes[i] == 'b' || notes[i] == '#') return 0;
-        
-        
-        
     }
-    
-    
     return 1;
 }
 
+
+// getNotes
+// args: string of notes (notes), vector to store individual notes in  (n)
+// return: no return
+// extracts notes from a string to a vector....
+// assumes that the string given is valid
 void getNotes(std::string notes, std::vector<std::string>* n){
     // valid notes are: 'C' 'C#'/'Db' 'D' 'D#'/'Eb'
     //                  'E' 'F' 'F#'/'Gb' 'G'
@@ -55,8 +63,6 @@ void getNotes(std::string notes, std::vector<std::string>* n){
     //     B Bb
     
     int len = notes.length();
-    
-    
     
     for (int i = 0; i < len - 1; i++){
         switch (notes[i]) {

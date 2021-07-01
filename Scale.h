@@ -13,6 +13,9 @@
 #include <string>
 #include <vector>
 
+// The Scale class refers to a single scale.
+// For instance, the C major scale would exist in the program as an instance
+// of the scale class
 
 class Scale{
 public:

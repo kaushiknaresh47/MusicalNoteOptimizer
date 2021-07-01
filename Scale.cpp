@@ -9,6 +9,9 @@
 #include "Scale.h"
 #include <cassert>
 
+// Scale constructor
+// The constructor sets the scale to the given set of notes...
+// (This function may not be necessary)
 Scale::Scale(std::string setter[7]){
     notes.resize(7);
     for (int i = 0; i < 7; i++) {
@@ -17,6 +20,9 @@ Scale::Scale(std::string setter[7]){
 }
 
 
+// getNote
+// args: index within a scale
+// return: the note at the given index of the scale
 std::string Scale::getNote(int index) const{
     assert(index > 0 && index < 7);
     return notes[index];

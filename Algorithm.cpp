@@ -35,12 +35,17 @@
     This keymapping is stored in the Scale class
 */
 
-
+// dist
+// args: first note (n_a), second note (n_b)
+// return: distance between the two notes.
 float Algo::dist(std::string n_a, std::string n_b)
 {
     return fabsf(xyz.note_val_access(n_a) - xyz.note_val_access(n_b));
 }
 
+
+// optimize
+// args: the vector of notes to be optimized (notes), the scale to optimize to (scale)
 void Algo::optimize(std::vector<std::string> &notes, Scale &scale)
 {
     std::vector<std::vector<int>> opt;
