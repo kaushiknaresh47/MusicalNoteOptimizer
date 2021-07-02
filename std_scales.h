@@ -17,14 +17,14 @@
 
 class std_scales {
 public:
-    void scale_access(std::string &scale, std::string scale_name);
-    float note_val_access(std::string note)
+    void scale_access(string &scale, string scale_name);
+    float note_val_access(string note)
     {
         return notes_vals[note];
     }
 private:
     int x;
-    std::unordered_map<std::string, float> notes_vals =
+    std::unordered_map<string, float> notes_vals =
     {
         {"C",   1},
         {"C#",  1.5},

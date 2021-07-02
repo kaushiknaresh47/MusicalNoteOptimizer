@@ -26,3 +26,8 @@ In this example, the output would be optmized to scale 1 since the sum of square
 Thus, the output would be C C C F A C G A.
 
 As of version 0.0, there is no consideration of musical sense, the algorithm is simply mathematical. 
+
+
+# Log
+### 07/01/2021
+The project so far can take in a string, validate it, and separate out the notes that have been input.

@@ -38,7 +38,7 @@
 // dist
 // args: first note (n_a), second note (n_b)
 // return: distance between the two notes.
-float Algo::dist(std::string n_a, std::string n_b)
+float Algo::dist(string n_a, string n_b)
 {
     return fabsf(xyz.note_val_access(n_a) - xyz.note_val_access(n_b));
 }
@@ -46,9 +46,10 @@ float Algo::dist(std::string n_a, std::string n_b)
 
 // optimize
 // args: the vector of notes to be optimized (notes), the scale to optimize to (scale)
-void Algo::optimize(std::vector<std::string> &notes, Scale &scale)
+// return: no return
+void Algo::optimize(string_vec &notes, Scale &scale, string_vec &result)
 {
-    std::vector<std::vector<int>> opt;
+    std::vector<std::vector <int> > opt;
     opt.resize(7);
     for(int i = 0; i < 7; i++)
     {

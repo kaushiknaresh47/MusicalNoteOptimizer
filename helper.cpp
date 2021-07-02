@@ -16,7 +16,7 @@
 // Examples:
 // validateString("Z X SA") returns 0
 // validateString("A C# Bb D") returns 1
-int validateString(std::string notes){
+int validateString(string notes){
     for (int i = 0; i < notes.length(); i++){
         if (notes[i] != 'C' ||
             notes[i] != 'D' ||
@@ -50,7 +50,7 @@ int validateString(std::string notes){
 // return: no return
 // extracts notes from a string to a vector....
 // assumes that the string given is valid
-void getNotes(std::string notes, std::vector<std::string>* n){
+void getNotes(string notes, string_vec* n){
     // valid notes are: 'C' 'C#'/'Db' 'D' 'D#'/'Eb'
     //                  'E' 'F' 'F#'/'Gb' 'G'
     //                  'G#'/'Ab' 'A' 'A#'/'Bb' 'B'

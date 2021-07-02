@@ -13,11 +13,14 @@
 #include <string>
 #include <vector>
 
+typedef std::vector<std::string> string_vec ;
+typedef std::string string;
 
-int validateString(std::string notes);
 
-void getNotes(std::string notes, std::vector<std::string>* n);
+int validateString(string notes);
 
-std::vector<int> notesToInt(std::vector<std::string> notes);
+void getNotes(string notes, string_vec* n);
+
+std::vector<int> notesToInt(string_vec notes);
 
 #endif /* helper_h */

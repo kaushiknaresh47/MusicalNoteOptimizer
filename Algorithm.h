@@ -15,11 +15,12 @@
 #include "Scale.h"
 #include "std_scales.h"
 
+
 class Algo{
 public:
-    void optimize(std::vector<std::string> &notes, Scale &scale);
+    void optimize(string_vec &notes, Scale &scale, string_vec &result);
 
-    float dist(std::string n_a, std::string n_b);
+    float dist(string n_a, string n_b);
 private:
     std_scales xyz;
 };

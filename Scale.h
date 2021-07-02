@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <string>
 #include <vector>
+#include "helper.h"
 
 // The Scale class refers to a single scale.
 // For instance, the C major scale would exist in the program as an instance
@@ -19,10 +20,10 @@
 
 class Scale{
 public:
-    Scale(std::string setter[7]);
-    std::string getNote(int index) const;
+    Scale(string setter[7]);
+    string getNote(int index) const;
 private:
-    std::vector<std::string> notes;
+    string_vec notes;
 
 };
 
