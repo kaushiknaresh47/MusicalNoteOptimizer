@@ -19,16 +19,19 @@ int main() {
     string s;
     
     getline(cin, s);
-    
-    cout << s << endl;
-    
+        
     vector<string> n1;
     
+    int testV = validateString(s);
+    if (!testV) {
+        cout << "invalid input" << endl;
+        return 0;
+    }
     
     getNotes(s, &n1);
     
-    cout << n1.size() << endl;
-    
+    cout << "number of notes is: " << n1.size() << endl;
+    cout << "printing out notes: " << endl;
     for(int i = 0; i < n1.size(); i++){
         cout << n1[i] << endl;
     }

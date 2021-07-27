@@ -18,28 +18,36 @@
 // validateString("A C# Bb D") returns 1
 int validateString(string notes){
     for (int i = 0; i < notes.length(); i++){
-        if (notes[i] != 'C' ||
-            notes[i] != 'D' ||
-            notes[i] != 'E' ||
-            notes[i] != 'F' ||
-            notes[i] != 'G' ||
-            notes[i] != 'A' ||
-            notes[i] != 'B' ||
-            notes[i] != '#' ||
-            notes[i] != 'b' ||
-            notes[i] != ' ') return 0;
-        
+        if (notes[i] != 'C' &&
+            notes[i] != 'D' &&
+            notes[i] != 'E' &&
+            notes[i] != 'F' &&
+            notes[i] != 'G' &&
+            notes[i] != 'A' &&
+            notes[i] != 'B' &&
+            notes[i] != '#' &&
+            notes[i] != 'b' &&
+            notes[i] != ' ' &&
+            notes[i] != '\n') return 0;
+            
+    
         if (i > 0){
             if (notes[i] == 'b' || notes[i] == '#') {
-                if (notes[i-1] != 'C' ||
-                    notes[i-1] != 'D' ||
-                    notes[i-1] != 'E' ||
-                    notes[i-1] != 'F' ||
-                    notes[i-1] != 'G' ||
-                    notes[i-1] != 'A' ||
+                if (notes[i-1] != 'C' &&
+                    notes[i-1] != 'D' &&
+                    notes[i-1] != 'E' &&
+                    notes[i-1] != 'F' &&
+                    notes[i-1] != 'G' &&
+                    notes[i-1] != 'A' &&
                     notes[i-1] != 'B') return 0;
             }
-        } else if (notes[i] == 'b' || notes[i] == '#') return 0;
+        } else if (notes[i] == 'b' || notes[i] == '#') {
+            return 0;
+        }
+        
+        if (i != (notes.length() - 1)) {
+            if (notes[i] == '\n') return 0;
+        }
     }
     return 1;
 }
